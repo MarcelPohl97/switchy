@@ -12,9 +12,17 @@ App: Switchy
 -> started developing landing header
 -> uploaded to github
 
+14.10.2020:
+-> create carousel component
+-> setup git repo and push files
+-> Added Switchy Carousel
+-> Made Switchy an own Functional Component SwichyCard
+
 todos:
 -> setup complete frontend with functionality 
--> setup git repo and push files
+-> styling the card
+-> add button try it out, More Switches
+-> build the info cards: customizable, publish or privat, Share your Story
 
 links:
 -> https://letsbuildui.dev/articles/building-a-react-card-carousel-component
