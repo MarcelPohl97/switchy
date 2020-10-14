@@ -50,7 +50,7 @@ const SwitchyCard = ({card, indexes, index}) => {
       }
     return (
         <Switchy key={card.id} className={`${determineClasses(indexes, index)}`}>
-            <SwitchyText>{card.copy}</SwitchyText>
+            <SwitchyText>{card.text}</SwitchyText>
         </Switchy>
     )
 }

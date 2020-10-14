@@ -1,6 +1,11 @@
 import React, { useEffect, useCallback, useState } from "react";
 import styled from 'styled-components';
 import SwitchyCard from './switchy';
+import ShoulderPressUp from '../images/dumbbell.svg';
+import InvertedRow from '../images/pull_up_bar.svg';
+import SitUp from '../images/sit_up.svg';
+import Squat from '../images/squat.svg';
+import TricepDips from '../images/tricep.svg';
 
 const SwitchContainer = styled.div`
     color: #070919;
@@ -29,28 +34,28 @@ const SwitchCarouselContainer = styled.ul`
 const cardItems = [
   {
     id: 1,
-    title: "Stacked Card Carousel",
-    copy: "1"
+    text: "Shoulder Press Up",
+    image: ShoulderPressUp
   },
   {
     id: 2,
-    title: "Second Item",
-    copy: "2"
+    text: "Inverted Row",
+    image: InvertedRow
   },
   {
     id: 3,
-    title: "A Third Card",
-    copy: "3"
+    text: "Sit Up",
+    image: SitUp
   },
   {
     id: 4,
-    title: "Fourth",
-    copy: "4"
+    text: "Squat",
+    image: Squat
   },
   {
     id: 5,
-    title: "Fifth",
-    copy: "5"
+    text: "Tricep Dips",
+    image: TricepDips
   }
 ];
 
