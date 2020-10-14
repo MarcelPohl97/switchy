@@ -1,0 +1,23 @@
+App: Switchy
+
+12.10.2020:
+-> Started App
+-> Made Mockup in Excalidraw
+-> created react App
+
+13.10.2020:
+-> setup react router
+-> setup views connected to router
+-> setup styled components
+-> started developing landing header
+-> uploaded to github
+
+todos:
+-> setup complete frontend with functionality 
+-> setup git repo and push files
+
+links:
+-> https://letsbuildui.dev/articles/building-a-react-card-carousel-component
+-> https://codepen.io/team/keyframers/pen/rNxmVZN
+-> https://uicookies.com/css-card-design/
+-> https://demo.uifort.com/bamburgh-react-messenger-application-pro-demo/Homepage
