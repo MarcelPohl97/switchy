@@ -31,12 +31,16 @@ const Switchy = styled.li`
 `;
 
 const SwitchyText = styled.p`
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-align: center;
     color: #333;
 `;
 
-const SwitchyCard = ({card, indexes, index}) => {
+const SwitchyImg = styled.img`
+    height: 50%;
+`;
+
+const SwitchyCard = ({card, indexes, index, switchyinformation}) => {
 
     const determineClasses = (indexes, cardIndex) => {
         if (indexes.currentIndex === cardIndex) {
@@ -48,10 +52,12 @@ const SwitchyCard = ({card, indexes, index}) => {
         }
         return "inactive";
       }
-    return (
+    return (<>
         <Switchy key={card.id} className={`${determineClasses(indexes, index)}`}>
+            <SwitchyImg src={card.image}></SwitchyImg>
             <SwitchyText>{card.text}</SwitchyText>
         </Switchy>
+    </>
     )
 }
 

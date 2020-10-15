@@ -18,11 +18,20 @@ App: Switchy
 -> Added Switchy Carousel
 -> Made Switchy an own Functional Component SwichyCard
 
-todos:
--> setup complete frontend with functionality 
--> styling the card
--> add button try it out, More Switches
+15.10.2020:
+-> Finished Card 
+-> Added SwitchyInformation to SwitchyCard
+-> added button try it out, More Switches
 -> build the info cards: customizable, publish or privat, Share your Story
+-> finished landing header
+
+todos:
+-> setup register page,
+-> setup login page,
+-> setup forgot password page,
+-> 
+
+
 
 links:
 -> https://letsbuildui.dev/articles/building-a-react-card-carousel-component

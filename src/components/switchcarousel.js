@@ -9,7 +9,8 @@ import TricepDips from '../images/tricep.svg';
 
 const SwitchContainer = styled.div`
     color: #070919;
-    margin: 1rem;
+    margin-bottom: -2rem;
+    margin-top: 1rem;
     font-size: 2.5rem;
     line-height: 1.4;
     font-weight:700;
@@ -26,13 +27,33 @@ const SwitchCarouselContainer = styled.ul`
     position: relative;
 `;
 
+const SwitchyPublisher = styled.h2`
+    font-size: 2.5rem;
+    color:#333;
+    margin-top: 5rem;
+    border-bottom: 5px solid #4191FF;
+    display:inline-block;
+`
+
 /*
  * Read the blog post here:
  * https://letsbuildui.dev/articles/building-a-react-card-carousel-component
  */
 
-const cardItems = [
+
+const switchyCard = [
   {
+    uid: 1,
+    id:'dasasdtraeasd',
+    name: "Marcellus Pale",
+    date: "16.10.2020",
+    publish: true,
+  },
+];
+
+const switchyItems = [
+  {
+    card_id: "dasasdtraeasd",
     id: 1,
     text: "Shoulder Press Up",
     image: ShoulderPressUp
@@ -59,6 +80,9 @@ const cardItems = [
   }
 ];
 
+//switchys -> name, date, publish, 
+//switchyobjects
+
 const SwitchCarousel = () => {
   const [intervaltime, setIntervalTime] = useState(4000);
   const [indexes, setIndexes] = useState({
@@ -68,11 +92,9 @@ const SwitchCarousel = () => {
   });
 
   const handleCardTransition = useCallback(() => {
-    // If we've reached the end, start again from the first card,
-    // but carry previous value over
-    if (indexes.currentIndex >= cardItems.length - 1) {
+    if (indexes.currentIndex >= switchyItems.length - 1) {
       setIndexes({
-        previousIndex: cardItems.length - 1,
+        previousIndex: switchyItems.length - 1,
         currentIndex: 0,
         nextIndex: 1
       });
@@ -81,7 +103,7 @@ const SwitchCarousel = () => {
         previousIndex: prevState.currentIndex,
         currentIndex: prevState.currentIndex + 1,
         nextIndex:
-          prevState.currentIndex + 2 === cardItems.length
+          prevState.currentIndex + 2 === switchyItems.length
             ? 0
             : prevState.currentIndex + 2
       }));
@@ -99,10 +121,11 @@ const SwitchCarousel = () => {
   return (
     <SwitchContainer>
       <SwitchCarouselContainer>
-        {cardItems.map((card, index) => (
+        {switchyItems.map((card, index) => (
             <SwitchyCard card={card} index={index} indexes={indexes} />
         ))}
       </SwitchCarouselContainer>
+      <SwitchyPublisher></SwitchyPublisher>
     </SwitchContainer>
   );
 };

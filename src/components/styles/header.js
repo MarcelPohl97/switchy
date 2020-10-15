@@ -6,7 +6,6 @@ const Header = styled.header`
     padding-left:25rem;
     padding-right: 25rem;
     background-color: #f4f5fd;
-    height: 100vh;
 `;
 
 export default Header;
