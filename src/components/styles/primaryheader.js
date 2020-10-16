@@ -14,6 +14,7 @@ const PrimaryHeader = styled.h2`
         margin-top:1rem;
         margin-bottom: 1.4rem;
     }
+
 `;
 
 export default PrimaryHeader;

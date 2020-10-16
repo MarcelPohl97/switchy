@@ -2,14 +2,31 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
     display:flex;
-    align-items:center;
+    box-sizing:border-box;
+    
+    &.direction-column {
+        flex-direction:column;
+    }
 
-    &.center {
+    &.content-center {
         justify-content:center;
+    }
+
+    &.item-center {
+        align-items:center;
     }
 
     &.mb-6 {
         margin-bottom:6rem;
+    }
+
+    &.w-100 {
+        width:100%;
+    }
+    &.not-last {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
     }
 `;
 

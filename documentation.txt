@@ -25,6 +25,10 @@ App: Switchy
 -> build the info cards: customizable, publish or privat, Share your Story
 -> finished landing header
 
+16.10.2020:
+-> Setup Styles Form FormHeader Input Label
+-> Started Working on Register Page
+
 todos:
 -> setup register page,
 -> setup login page,

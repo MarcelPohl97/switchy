@@ -12,6 +12,10 @@ const SubHeader = styled.p`
         font-size: 1rem;
         line-height: 1.2;
     }
+
+    &.mb-3 {
+        margin-bottom:3rem;
+    }
 `;
 
 export default SubHeader;

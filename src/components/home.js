@@ -18,6 +18,13 @@ import Emoji from './styles/emoji';
 import SwitchCarousel from './switchcarousel';
 import InfoCard from './infocard';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 const info_cards = [
     {
         color: 'green',
@@ -43,7 +50,7 @@ const Home = () => {
     return (
         <Header>
             <Navigation>
-                <Wrapper>
+                <Wrapper className={"item-center"}>
                     <AppIcon src={AppImg}></AppIcon>
                     <HeadingSecondary>Switchy</HeadingSecondary>
                 </Wrapper>
@@ -53,12 +60,12 @@ const Home = () => {
                     <NavAnchor>Showcase</NavAnchor>
                     <NavAnchor>About</NavAnchor>
                 </Wrapper>
-                <Button className={"square functional bluebg reset"}>Register</Button>
+                <Link to="/register"><Button className={"square functional bluebg reset"}>Register</Button></Link>
             </Navigation>
             <PrimaryHeader><Highlight>Switchy</Highlight> Card Show App <br></br> to show off the beauty in Life</PrimaryHeader>
             <SubHeader>Your workout routine, holidays, full day of eating or whatever brings the <br></br> joy in your life with a custom and timeable carousel</SubHeader>
             <SwitchCarousel />
-            <Wrapper className={"center mb-6"}>
+            <Wrapper className={"center mb-6 content-center"}>
                 <Button className={"rounded functional bluebg reset"}>Try it out 🡲</Button>
                 <Button className={"rounded rounded_light functional reset"}>More Switches <Emoji role="img" aria-label="Click">☝</Emoji></Button>
             </Wrapper>
