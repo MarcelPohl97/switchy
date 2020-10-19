@@ -45,7 +45,7 @@ const Button = styled.button`
         border-radius: 100px;
         font-size: 1rem;
     }
-    &.rounded_light {
+    &.lightblue {
         background-color:#DEEBFE;
         color:#4191FF;
         box-shadow:none;

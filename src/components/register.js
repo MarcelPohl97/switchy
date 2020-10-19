@@ -60,8 +60,12 @@ const Register = () => {
                         <Label>Password</Label>
                         <Input></Input>
                     </Wrapper>
-                    <Divider></Divider>
                 </Form>
+                <Divider></Divider>
+                <Wrapper className={"content-center mtb-3"}>
+                    <Button className={"functional reset square bluebg"}>Register</Button>
+                    <Button className={"functional reset square lightblue"}>Or Login</Button>
+                </Wrapper>
             </FormContainer>
         </Header>
     )

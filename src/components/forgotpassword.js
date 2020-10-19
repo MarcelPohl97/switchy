@@ -27,7 +27,7 @@ import {
     Link
   } from "react-router-dom";
 
-const Login = () => {
+const ForgotPassword = () => {
     return (
         <Header>
             <Navigation>
@@ -41,30 +41,26 @@ const Login = () => {
                     <NavAnchor>Showcase</NavAnchor>
                     <NavAnchor>About</NavAnchor>
                 </Wrapper>
-                <Link to="/register"><Button className={"square functional bluebg reset"}>Register</Button></Link>
+                <Link to="/login"><Button className={"square functional bluebg reset"}>Login</Button></Link>
             </Navigation>
-            <PrimaryHeader><Highlight>Login</Highlight> and get <br></br> access to  your personal Switchy</PrimaryHeader>
-            <SubHeader className={"mb-3"}>After login you can create or browse through alot of Switchy´s <br></br> they will bring joy in your life</SubHeader>
+            <PrimaryHeader><Highlight>Forgot Password</Highlight> you will get an Email <br></br> to get access to your personal Switchy</PrimaryHeader>
+            <SubHeader className={"mb-3"}>After recovering your password you can login again and create or browse through alot of Switchy´s <br></br> they will bring joy in your life</SubHeader>
             <FormContainer>
-                <FormHeader>Login</FormHeader>
+                <FormHeader>Forgot Password</FormHeader>
                 <Form>
                     <Wrapper className={"direction-column content-center w-100 not-last"}>
                         <Label>E-Mail</Label>
                         <Input></Input>
                     </Wrapper>
-                    <Wrapper className={"direction-column content-center w-100 not-last"}>
-                        <Label>Password</Label>
-                        <Input></Input>
-                    </Wrapper>
                 </Form>
                 <Divider></Divider>
                 <Wrapper className={"content-center mtb-3"}>
-                    <Button className={"functional reset square bluebg"}>Login</Button>
-                    <Link to="/forgotpassword"><Button className={"functional reset square lightblue"}>Or forgot Password?</Button></Link>
+                    <Button className={"functional reset square bluebg"}>Send Email</Button>
+                    <Link to="/login"><Button className={"functional reset square lightblue"}>Or Login</Button></Link>
                 </Wrapper>
             </FormContainer>
         </Header>
     )
 }
 
-export default Login;
+export default ForgotPassword;

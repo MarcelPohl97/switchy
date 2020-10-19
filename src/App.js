@@ -10,6 +10,7 @@ import {
 import Home from './components/home';
 import Register from './components/register';
 import Login from './components/login';
+import ForgotPassword from './components/forgotpassword';
 import Switches from './components/switches';
 import Dashboard from './components/dashboard';
 import Switchy from './components/switchy';
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route path="/login">
           <Login />
+        </Route>
+        <Route path="/forgotpassword">
+          <ForgotPassword />
         </Route>
         <Route path="/switches">
           <Switches />

@@ -20,6 +20,10 @@ const Wrapper = styled.div`
         margin-bottom:6rem;
     }
 
+    &.mtb-3 {
+        margin: 1.5rem 0;
+    }
+
     &.w-100 {
         width:100%;
     }

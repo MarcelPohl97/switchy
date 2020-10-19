@@ -6,7 +6,7 @@ const Form = styled.form`
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    padding: 5rem;
+    padding: 3rem 5rem;
     overflow-x:hidden;
     box-sizing:border-box;
 `

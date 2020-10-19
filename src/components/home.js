@@ -67,7 +67,7 @@ const Home = () => {
             <SwitchCarousel />
             <Wrapper className={"center mb-6 content-center"}>
                 <Button className={"rounded functional bluebg reset"}>Try it out 🡲</Button>
-                <Button className={"rounded rounded_light functional reset"}>More Switches <Emoji role="img" aria-label="Click">☝</Emoji></Button>
+                <Button className={"rounded lightblue functional reset"}>More Switches <Emoji role="img" aria-label="Click">☝</Emoji></Button>
             </Wrapper>
             <Wrapper className={"center"}>
                 {info_cards.map((info) => (
