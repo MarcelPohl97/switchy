@@ -40,17 +40,6 @@ const SwitchyPublisher = styled.h2`
  * https://letsbuildui.dev/articles/building-a-react-card-carousel-component
  */
 
-
-const switchyCard = [
-  {
-    uid: 1,
-    id:'dasasdtraeasd',
-    name: "Marcellus Pale",
-    date: "16.10.2020",
-    publish: true,
-  },
-];
-
 const switchyItems = [
   {
     card_id: "dasasdtraeasd",

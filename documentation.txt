@@ -29,11 +29,14 @@ App: Switchy
 -> Setup Styles Form FormHeader Input Label
 -> Started Working on Register Page
 
+17.10.2020:
+-> setup register, login, forgotpassword page
+
 todos:
--> setup register page,
--> setup login page,
--> setup forgot password page,
--> 
+-> create dashboard card to click and get redirected to that switchy look into component routing
+-> add a little drop down button on the right from dashboard cards to add stuff like edit card or like card
+-> create createswitch to load in text and images for now later you can add customization
+-> create account page to edit your data for now email pw and username
 
 
 
