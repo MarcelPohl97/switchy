@@ -9,6 +9,7 @@ import Navigation from './styles/navigation';
 import AppIcon from './styles/appicon';
 import AppImg from '../images/sliding.svg';
 import Wrapper from './styles/wrapper';
+import WrapperGrid from './styles/wrapper_grid';
 import HeadingSecondary from './styles/headingsecondary';
 import NavAnchor from './styles/navanchor';
 import Button from './styles/button';
@@ -20,6 +21,7 @@ import Emoji from './styles/emoji';
 /*Components*/
 import SwitchCarousel from './switchcarousel';
 import InfoCard from './infocard';
+import SwitchyPreview from './switchy_preview';
 
 import {
   BrowserRouter as Router,
@@ -28,36 +30,30 @@ import {
   Link
 } from "react-router-dom";
 
-const switchyCard = [
-    {
-      uid: 1,
-      name: 'Marcellus Fullbody Workout',
-      id:'dasasdtraeasd',
-      publisher: "Marcellus Pale",
-      date: "16.10.2020",
-      publish: true,
-      image: Workout,
-    },
-  ];    
 
 const Switches = () => {
     return (
         <Header>
             <Navigation>
                 <Wrapper className={"item-center"}>
-                    <AppIcon src={AppImg}></AppIcon>
+                    <Link to="/"><AppIcon src={AppImg}></AppIcon></Link>
                     <HeadingSecondary>Switchy</HeadingSecondary>
                 </Wrapper>
-                <Wrapper>
-                    <NavAnchor>Overview</NavAnchor>
-                    <NavAnchor>Try it</NavAnchor>
-                    <NavAnchor>Showcase</NavAnchor>
-                    <NavAnchor>About</NavAnchor>
+                <Wrapper className={"item-center"}>
+                    <Link style={{ textDecoration: 'none' }} to="/dashboard"><NavAnchor>Dashboard</NavAnchor></Link>
+                    <Link style={{ textDecoration: 'none' }} to="/account"><NavAnchor>Account</NavAnchor></Link>
+                    <Link style={{ textDecoration: 'none' }} to="/subscription"><NavAnchor>Subscription</NavAnchor></Link>
+                    <Link style={{ textDecoration: 'none' }} to="/createswitch"><NavAnchor>Create Switchy</NavAnchor></Link>
                 </Wrapper>
                 <Link to="/register"><Button className={"square functional bluebg reset"}>Logout</Button></Link>
             </Navigation>
-            <PrimaryHeader><Highlight>Switchy</Highlight> Explore all the Switchys <br></br> they will show you the beauty in Life</PrimaryHeader>
+            <PrimaryHeader><Highlight>Switches</Highlight> Explore all the Switchy´s <br></br> they will show you the beauty in Life</PrimaryHeader>
             <SubHeader>workout routine, holiday, full day of eating everything can be found here <br></br> they will bring joy in your life</SubHeader>
+            <WrapperGrid>
+                <Link to="/dashboard"><SwitchyPreview /></Link>
+                <SwitchyPreview />
+                <SwitchyPreview />
+            </WrapperGrid>
         </Header>
     )
 }

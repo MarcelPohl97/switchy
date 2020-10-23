@@ -64,7 +64,7 @@ const Register = () => {
                 <Divider></Divider>
                 <Wrapper className={"content-center mtb-3"}>
                     <Button className={"functional reset square bluebg"}>Register</Button>
-                    <Button className={"functional reset square lightblue"}>Or Login</Button>
+                    <Link to="/login"><Button className={"functional reset square lightblue"}>Or Login</Button></Link>
                 </Wrapper>
             </FormContainer>
         </Header>

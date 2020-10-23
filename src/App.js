@@ -7,6 +7,8 @@ import {
   Link
 } from "react-router-dom";
 
+
+/*Components*/
 import Home from './components/home';
 import Register from './components/register';
 import Login from './components/login';
@@ -17,7 +19,42 @@ import Switchy from './components/switchy';
 import CreateSwitch from './components/createswitch';
 import Account from './components/account';
 
+/*Images*/
+import Workout from './images/workout.svg';
+import Food from './images/food.svg';
+import Beach from './images/beach.svg':
+
 function App() {
+  const switchycardpreview = [
+    {
+      uid: 1,
+      name: 'Marcellus Fullbody Workout',
+      id:'dasasdtraeasd',
+      publisher: "Marcellus Pale",
+      date: "16.10.2020",
+      publish: true,
+      image: Workout,
+    },
+    {
+      uid: 2,
+      name: 'Pale Full day of Eating',
+      id:'dasasdtraeasdadasd',
+      publisher: "Pale Sonas",
+      date: "16.10.2020",
+      publish: true,
+      image: Food,
+    },
+    {
+      uid: 3,
+      name: 'Marcellus Fullbody Workout',
+      id:'dasasdtraeasd',
+      publisher: "Marcellus Pale",
+      date: "16.10.2020",
+      publish: true,
+      image: Beach,
+    }
+
+  ];    
   return (
     <div className="App">
       <Router>
@@ -34,7 +71,7 @@ function App() {
           <ForgotPassword />
         </Route>
         <Route path="/switches">
-          <Switches />
+          <Switches  />
         </Route>
         <Route path="/dashboard">
           <Dashboard />

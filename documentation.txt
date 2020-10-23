@@ -32,6 +32,12 @@ App: Switchy
 17.10.2020:
 -> setup register, login, forgotpassword page
 
+23.10.2020:
+-> setup switches
+-> setup switchcardpreview
+-> setup switchcardpreview design
+-> setup data for switchcardpreview
+
 todos:
 -> create dashboard card to click and get redirected to that switchy look into component routing
 -> add a little drop down button on the right from dashboard cards to add stuff like edit card or like card
