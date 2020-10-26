@@ -1,11 +1,7 @@
 import React, { useEffect, useCallback, useState } from "react";
 import styled from 'styled-components';
-import SwitchyCard from './switchy';
-import ShoulderPressUp from '../images/dumbbell.svg';
-import InvertedRow from '../images/pull_up_bar.svg';
-import SitUp from '../images/sit_up.svg';
-import Squat from '../images/squat.svg';
-import TricepDips from '../images/tricep.svg';
+import SwitchyCard from './switchycard';
+
 
 const SwitchContainer = styled.div`
     color: #070919;
@@ -40,39 +36,11 @@ const SwitchyPublisher = styled.h2`
  * https://letsbuildui.dev/articles/building-a-react-card-carousel-component
  */
 
-const switchyItems = [
-  {
-    card_id: "dasasdtraeasd",
-    id: 1,
-    text: "Shoulder Press Up",
-    image: ShoulderPressUp
-  },
-  {
-    id: 2,
-    text: "Inverted Row",
-    image: InvertedRow
-  },
-  {
-    id: 3,
-    text: "Sit Up",
-    image: SitUp
-  },
-  {
-    id: 4,
-    text: "Squat",
-    image: Squat
-  },
-  {
-    id: 5,
-    text: "Tricep Dips",
-    image: TricepDips
-  }
-];
 
 //switchys -> name, date, publish, 
 //switchyobjects
 
-const SwitchCarousel = () => {
+const SwitchCarousel = ({switchyItems}) => {
   const [intervaltime, setIntervalTime] = useState(4000);
   const [indexes, setIndexes] = useState({
     previousIndex: 0,

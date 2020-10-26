@@ -31,7 +31,7 @@ import {
 } from "react-router-dom";
 
 
-const Switches = () => {
+const Switches = ({switchycardpreview}) => {
     return (
         <Header>
             <Navigation>
@@ -50,9 +50,9 @@ const Switches = () => {
             <PrimaryHeader><Highlight>Switches</Highlight> Explore all the Switchy´s <br></br> they will show you the beauty in Life</PrimaryHeader>
             <SubHeader>workout routine, holiday, full day of eating everything can be found here <br></br> they will bring joy in your life</SubHeader>
             <WrapperGrid>
-                <Link to="/dashboard"><SwitchyPreview /></Link>
-                <SwitchyPreview />
-                <SwitchyPreview />
+                {switchycardpreview.map((preview) => (
+                    <SwitchyPreview preview={preview} />
+                ))}
             </WrapperGrid>
         </Header>
     )

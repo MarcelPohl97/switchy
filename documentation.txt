@@ -38,12 +38,23 @@ App: Switchy
 -> setup switchcardpreview design
 -> setup data for switchcardpreview
 
-todos:
--> create dashboard card to click and get redirected to that switchy look into component routing
--> add a little drop down button on the right from dashboard cards to add stuff like edit card or like card
--> create createswitch to load in text and images for now later you can add customization
--> create account page to edit your data for now email pw and username
+26.10.2020:
+-> changed switchy to switchycard and created actual switchy view
+-> added data flow to switchy previews
+-> setup routing to individual cards
+-> setup load in cards based on clicked preview card id
+->
 
+todos:
+-> create dashboard design with fetching only preview card items that are the same as uuid, create fake uuid
+-> account design, edit your data for now email pw and username
+-> subscription design https://demo.uifort.com/bamburgh-react-admin-dashboard-material-ui-pro-demo/Overview
+-> add a edit button if your authenticated when watching your own switchy
+
+-> make everything responsive and make a first build and deploy to netlify
+-> createswitch design
+-> create backend api with python fastapi
+-> create firebase
 
 
 links:

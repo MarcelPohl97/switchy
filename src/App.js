@@ -18,18 +18,20 @@ import Dashboard from './components/dashboard';
 import Switchy from './components/switchy';
 import CreateSwitch from './components/createswitch';
 import Account from './components/account';
+import Subscription from './components/subscription';
 
 /*Images*/
 import Workout from './images/workout.svg';
 import Food from './images/food.svg';
-import Beach from './images/beach.svg':
+import Beach from './images/beach.svg';
 
 function App() {
   const switchycardpreview = [
     {
       uid: 1,
-      name: 'Marcellus Fullbody Workout',
-      id:'dasasdtraeasd',
+      title: 'Marcellus Fullbody Workout',
+      caption: 'Workout Exercises',
+      id:1,
       publisher: "Marcellus Pale",
       date: "16.10.2020",
       publish: true,
@@ -37,8 +39,9 @@ function App() {
     },
     {
       uid: 2,
-      name: 'Pale Full day of Eating',
-      id:'dasasdtraeasdadasd',
+      title: 'Pale Full day of Eating',
+      caption: 'What I Eat to stay healthy',
+      id:2,
       publisher: "Pale Sonas",
       date: "16.10.2020",
       publish: true,
@@ -46,15 +49,15 @@ function App() {
     },
     {
       uid: 3,
-      name: 'Marcellus Fullbody Workout',
-      id:'dasasdtraeasd',
-      publisher: "Marcellus Pale",
+      title: 'Jae Holidays',
+      caption: 'In Italy Pontemero',
+      id:3,
+      publisher: "Jae Daso",
       date: "16.10.2020",
       publish: true,
       image: Beach,
     }
-
-  ];    
+  ];  
   return (
     <div className="App">
       <Router>
@@ -71,19 +74,20 @@ function App() {
           <ForgotPassword />
         </Route>
         <Route path="/switches">
-          <Switches  />
+          <Switches switchycardpreview={switchycardpreview} />
         </Route>
         <Route path="/dashboard">
           <Dashboard />
         </Route>
-        <Route path="/switch">
-          <Switchy />
-        </Route>
+        <Route path="/switchy/:id" children={<Switchy />}></Route>
         <Route path="/createswitch">
           <CreateSwitch />
         </Route>
         <Route path="/account">
           <Account />
+        </Route>
+        <Route path="/subscription">
+          <Subscription />
         </Route>
       </Router>
     </div>

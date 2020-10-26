@@ -4,6 +4,10 @@ import upper_wave from '../images/upper_wave.svg';
 import down_wave from '../images/down_wave.svg';
 import workout from '../images/workout.svg';
 
+import {
+    Link
+  } from "react-router-dom";
+
 const SwitchyPreviewCard = styled.div`
     height: 450px;
     background-color: #F5F7F9;
@@ -79,19 +83,20 @@ const SwitchyPreviewImage = styled.img`
 
 
 
-const SwitchyPreview = () => {
+const SwitchyPreview = ({preview}) => {
     return (
-    <>
-      <SwitchyPreviewCard>
-            <SwitchyPreviewTop>
-                <SwitchyPreviewTitle>Workout Routine</SwitchyPreviewTitle>
-                <SwitchyPreviewCaption className={"explain"}>Bodyweight Exercises</SwitchyPreviewCaption>
-                <SwitchyPreviewCaption className={"madeby"}>made by Marcellus Pale</SwitchyPreviewCaption>
-                <SwitchyPreviewImage className={"upper index-2"} src={upper_wave}></SwitchyPreviewImage>
-                <SwitchyPreviewImage className={"down index-1"} src={down_wave}></SwitchyPreviewImage>
-            </SwitchyPreviewTop>
-            <SwitchyPreviewImage className={"main"} src={workout}></SwitchyPreviewImage>
-        </SwitchyPreviewCard>
+    <>  <Link to={`/switchy/${preview.id}`}>
+            <SwitchyPreviewCard>
+                <SwitchyPreviewTop>
+                    <SwitchyPreviewTitle>{ preview.title }</SwitchyPreviewTitle>
+                    <SwitchyPreviewCaption className={"explain"}>{ preview.caption }</SwitchyPreviewCaption>
+                    <SwitchyPreviewCaption className={"madeby"}>made by { preview.publisher }</SwitchyPreviewCaption>
+                    <SwitchyPreviewImage className={"upper index-2"} src={upper_wave}></SwitchyPreviewImage>
+                    <SwitchyPreviewImage className={"down index-1"} src={down_wave}></SwitchyPreviewImage>
+                </SwitchyPreviewTop>
+                <SwitchyPreviewImage className={"main"} src={preview.image}></SwitchyPreviewImage>
+            </SwitchyPreviewCard>
+        </Link>
     </>
 
     )

@@ -18,12 +18,21 @@ import Emoji from './styles/emoji';
 import SwitchCarousel from './switchcarousel';
 import InfoCard from './infocard';
 
+/*Images*/
+import ShoulderPressUp from '../images/dumbbell.svg';
+import InvertedRow from '../images/pull_up_bar.svg';
+import SitUp from '../images/sit_up.svg';
+import Squat from '../images/squat.svg';
+import TricepDips from '../images/tricep.svg';
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+
+/*Switchy Items*/
 
 const info_cards = [
     {
@@ -46,6 +55,35 @@ const info_cards = [
     }
 ]
 
+const switchypreviewItems = [
+    {
+      card_id: "dasasdtraeasd",
+      id: 1,
+      text: "Shoulder Press Up",
+      image: ShoulderPressUp
+    },
+    {
+      id: 2,
+      text: "Inverted Row",
+      image: InvertedRow
+    },
+    {
+      id: 3,
+      text: "Sit Up",
+      image: SitUp
+    },
+    {
+      id: 4,
+      text: "Squat",
+      image: Squat
+    },
+    {
+      id: 5,
+      text: "Tricep Dips",
+      image: TricepDips
+    }
+  ];  
+
 const Home = () => {
     return (
         <Header>
@@ -54,20 +92,20 @@ const Home = () => {
                     <AppIcon src={AppImg}></AppIcon>
                     <HeadingSecondary>Switchy</HeadingSecondary>
                 </Wrapper>
-                <Wrapper>
+                <Wrapper className={"item-center"}>
                     <NavAnchor>Overview</NavAnchor>
                     <NavAnchor>Try it</NavAnchor>
-                    <NavAnchor>Showcase</NavAnchor>
+                    <Link style={{ textDecoration: 'none' }} to="/switches"><NavAnchor>Showcase</NavAnchor></Link>
                     <NavAnchor>About</NavAnchor>
                 </Wrapper>
                 <Link to="/register"><Button className={"square functional bluebg reset"}>Register</Button></Link>
             </Navigation>
             <PrimaryHeader><Highlight>Switchy</Highlight> Card Show App <br></br> to show off the beauty in Life</PrimaryHeader>
             <SubHeader>Your workout routine, holidays, full day of eating or whatever brings the <br></br> joy in your life with a custom and timeable carousel</SubHeader>
-            <SwitchCarousel />
+            <SwitchCarousel switchyItems={switchypreviewItems} />
             <Wrapper className={"center mb-6 content-center"}>
                 <Button className={"rounded functional bluebg reset"}>Try it out 🡲</Button>
-                <Button className={"rounded lightblue functional reset"}>More Switches <Emoji role="img" aria-label="Click">☝</Emoji></Button>
+                <Link to="/switches"><Button className={"rounded lightblue functional reset"}>More Switches <Emoji role="img" aria-label="Click">☝</Emoji></Button></Link>
             </Wrapper>
             <Wrapper className={"center"}>
                 {info_cards.map((info) => (
