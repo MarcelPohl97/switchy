@@ -43,18 +43,24 @@ App: Switchy
 -> added data flow to switchy previews
 -> setup routing to individual cards
 -> setup load in cards based on clicked preview card id
-->
+
+16.11.2020:
+-> added dashboard design
+-> added fetching switches with only personal uid
+-> added edit button to switchy if authenticated on your own switchy
+-> added fake auth
+-> added account settings change
 
 todos:
--> create dashboard design with fetching only preview card items that are the same as uuid, create fake uuid
--> account design, edit your data for now email pw and username
 -> subscription design https://demo.uifort.com/bamburgh-react-admin-dashboard-material-ui-pro-demo/Overview
--> add a edit button if your authenticated when watching your own switchy
+-> createswitch design
+-> create new switchy functionality and design 
+-> like functionality
 
 -> make everything responsive and make a first build and deploy to netlify
--> createswitch design
 -> create backend api with python fastapi
 -> create firebase
+
 
 
 links:

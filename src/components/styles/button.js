@@ -21,6 +21,10 @@ const Button = styled.button`
         }
     }
 
+    &.mlr {
+        margin:0 1rem;
+    }
+
     &.reset {
         cursor:pointer;
         display: inline-block;

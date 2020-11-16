@@ -111,7 +111,7 @@ const switchyDataItems = [
 ]
     
 
-const Switchy = () => {
+const Switchy = ({auth}) => {
     const [switchyItems, setSwitchyItems] = useState([]);
     const {id} = useParams();
 
@@ -123,24 +123,25 @@ const Switchy = () => {
 
     return (
         <Header>
-            <Navigation>
+           <Navigation>
                 <Wrapper className={"item-center"}>
                     <Link to="/"><AppIcon src={AppImg}></AppIcon></Link>
                     <HeadingSecondary>Switchy</HeadingSecondary>
                 </Wrapper>
-                <Wrapper>
-                    <NavAnchor>Overview</NavAnchor>
-                    <NavAnchor>Try it</NavAnchor>
-                    <NavAnchor>Showcase</NavAnchor>
-                    <NavAnchor>About</NavAnchor>
+                <Wrapper className={"item-center"}>
+                    <Link style={{ textDecoration: 'none' }} to="/dashboard"><NavAnchor>Dashboard</NavAnchor></Link>
+                    <Link style={{ textDecoration: 'none' }} to="/account"><NavAnchor>Account</NavAnchor></Link>
+                    <Link style={{ textDecoration: 'none' }} to="/subscription"><NavAnchor>Subscription</NavAnchor></Link>
+                    <Link style={{ textDecoration: 'none' }} to="/createswitch"><NavAnchor>Create Switchy</NavAnchor></Link>
                 </Wrapper>
-                <Link to="/register"><Button className={"square functional bluebg reset"}>Register</Button></Link>
+                <Link to="/register"><Button className={"square functional bluebg reset"}>Logout</Button></Link>
             </Navigation>
-            <PrimaryHeader><Highlight>Enjoy your</Highlight> Switchy</PrimaryHeader>
+            <PrimaryHeader><Highlight>Enjoy</Highlight> your Switchy</PrimaryHeader>
             <SubHeader> Joy in life is endless you just have to create it</SubHeader>
             <SwitchCarousel switchyItems={switchyItems} />
             <Wrapper className={"center mb-6 content-center"}>
                 <Link to="/switches"><Button className={"rounded functional bluebg reset"}>Back to Switches 🡲</Button></Link>
+                {auth ? <Link to="/createswitch"><Button className={"rounded functional bluebg reset mlr"}>Edit your Switchy 🔧</Button></Link> : ""}
                 <Button className={"rounded lightblue functional reset"}>Like <Emoji role="img" aria-label="Click">👍</Emoji></Button>
             </Wrapper>
         </Header>

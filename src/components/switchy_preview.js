@@ -98,7 +98,6 @@ const SwitchyPreview = ({preview}) => {
             </SwitchyPreviewCard>
         </Link>
     </>
-
     )
 }
 

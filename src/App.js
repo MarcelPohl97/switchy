@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -26,6 +26,7 @@ import Food from './images/food.svg';
 import Beach from './images/beach.svg';
 
 function App() {
+  const [auth, setAuth] = useState(true);
   const switchycardpreview = [
     {
       uid: 1,
@@ -77,9 +78,9 @@ function App() {
           <Switches switchycardpreview={switchycardpreview} />
         </Route>
         <Route path="/dashboard">
-          <Dashboard />
+          <Dashboard switchycardpreview={switchycardpreview} />
         </Route>
-        <Route path="/switchy/:id" children={<Switchy />}></Route>
+        <Route path="/switchy/:id" children={<Switchy auth={auth} />}></Route>
         <Route path="/createswitch">
           <CreateSwitch />
         </Route>
